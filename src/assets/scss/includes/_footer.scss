@@ -1,0 +1,12 @@
+.footer__main {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__left {
+    order: 1;
+}
+
+.footer__right {
+    order: 2;
+}

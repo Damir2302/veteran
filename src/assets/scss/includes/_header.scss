@@ -1,0 +1,230 @@
+.header__main {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(md) {
+        padding: 30px 0;
+    }
+
+    @include breakpoint(lg) {
+        padding: 0;
+        display: block;
+    }
+}
+
+.header__top {
+
+    @include breakpoint(lg) {
+        padding: 24px 0 30px;
+    }
+}
+
+.header__logo {
+    width: 156px;
+
+    @include breakpoint(lg) {
+        margin: 0 auto;
+        width: 210px;
+    }
+}
+
+.header__bottom {
+
+    @include breakpoint(lg) {
+        border-top: 1px solid #D9D9D9;
+    }
+}
+
+.header__bottom .container {
+
+    @include breakpointMax(lg) {
+        padding-left: 0;
+    }
+}
+
+.header__nav {
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+    }
+
+    @include breakpoint(lg) {
+        display: block;
+    }
+}
+
+.navbar {
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.nav {
+
+    @include breakpointMax(lg) {
+        padding-top: 60px;
+        background: $gray6;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        max-width: 320px;
+        transition: all 0.5s ease;
+        z-index: 10;
+    }
+
+    @include breakpoint(lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.nav.open {
+
+    @include breakpointMax(lg) {
+        right: 0;
+    }
+}
+
+.close-menu {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+.close-menu::after {
+    content: '\f00d';
+    font-family: $icon;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 25px;
+    color: $red;
+}
+
+.nav__item {
+
+    @include breakpointMax(lg) {
+        margin-bottom: 23px;
+    }
+}
+
+.nav__item ~ .nav__item {
+
+    @include breakpoint(lg) {
+        margin-left: 24px;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 40px;
+    }
+}
+
+.nav__item-link {
+
+    @include breakpoint(lg) {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: $black;
+    }
+}
+
+.nav__item:hover .nav__item-link {
+    color: $red;
+}
+
+.header-phone {
+
+    @include breakpointMax(md) {
+        display: none;
+    }
+
+    @include breakpoint(md) {
+        display: flex;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: $black;
+    }
+
+    @include breakpoint(lg) {
+        margin-left: auto;
+        margin-right: 30px;
+    }
+
+    @include breakpoint(xl) {
+        margin-right: 40px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
+
+.header-phone::before {
+    content: '\e11c';
+    margin-right: 10px;
+    font-family: $fa5;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1;
+    color: $red;
+
+    @include breakpoint(xl) {
+        font-size: 24px;
+    }
+}
+
+.header-button {
+
+    @include breakpointMax(md) {
+        display: none;
+    }
+
+    @include breakpoint(md) {
+        margin-left: 16px;
+        margin-right: 80px;
+    }
+
+    @include breakpoint(lg) {
+        margin: 0;
+    }
+}
+
+.header-button .button-style {
+
+    @include breakpoint(md) {
+        padding: 11.5px 16px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 19.5px 20px;
+    }
+}
+
+.header-burger {
+    font-size: 25px;
+    line-height: 25px;
+    color: $red;
+    cursor: pointer;
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+}

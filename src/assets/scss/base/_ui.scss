@@ -55,6 +55,22 @@ main {
     overflow: hidden;
 }
 
+#page::before {
+    content: '';
+}
+
+#page.bg-overlay::before {
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
 input {
     background: transparent;
     width: 100%;
@@ -110,4 +126,18 @@ button {
 .button-style--white:hover,
 .button-style--white-transparent:hover {
     background: rgba(255, 255, 255, 0.3);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1280px;
+
+    @include breakpoint(md) {
+        padding: 0 30px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 0 40px;
+    }
 }

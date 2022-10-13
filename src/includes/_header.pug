@@ -2,3 +2,44 @@ include _mixins
 block header
 
     header#header.header
+
+        .header__main
+
+            .header__top
+
+                .container
+
+                    .header__logo
+
+                        a(href="/")
+                            img(src="assets/images/logo.png", alt="logo")
+
+            .header__bottom
+
+                .container
+
+                    .header__nav
+
+                        .navbar
+
+                            ul.nav
+                                .close-menu
+                                li.nav__item
+                                    a.nav__item-link(href="#") Главная
+                                li.nav__item
+                                    a.nav__item-link(href="#") О редакции
+                                li.nav__item
+                                    a.nav__item-link(href="#") Архив
+                                li.nav__item
+                                    a.nav__item-link(href="#") Документы
+                                li.nav__item
+                                    a.nav__item-link(href="#") Контакты
+
+                            .header-phone
+                                a(href="tel:8-495-608-95-00") 8-495-608-95-00
+
+                            .header-button
+                                .button-style.button-style--red Оформить подписку
+
+                        .header-burger
+                            i.far.fa-bars
