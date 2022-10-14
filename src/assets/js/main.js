@@ -13,4 +13,13 @@ $(document).ready(function() {
         $('#page').removeClass('bg-overlay')
     })
 
+    $('html').on('click', function(e) {
+        if (!$(e.target).closest('.nav').length &&
+            !$(e.target).closest('.header-burger').length) {
+            $('.nav').removeClass('open')
+            $('body').removeClass('overflow-hidden')
+            $('#page').removeClass('bg-overlay')
+        }
+    })
+
 });

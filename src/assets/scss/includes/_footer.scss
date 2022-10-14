@@ -1,12 +1,391 @@
+.footer-form {
+    padding: 50px 0;
+    background: #F6F6F6;
+
+    @include breakpoint(md) {
+        padding: 60px 0;
+    }
+
+    @include breakpoint(lg) {
+        padding: 80px 0;
+    }
+
+    @include breakpoint(xl) {
+        padding: 90px 0;
+    }
+}
+
+.f-form {
+
+    @include breakpoint(md) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include breakpoint(lg) {
+        align-items: center;
+    }
+}
+
+.f-form__contacts {
+
+    @include breakpoint(md) {
+        width: calc(((100% / 12) * 5) - 12px)
+    }
+
+    @include breakpoint(lg) {
+        width: calc(((100% / 12) * 6) - 16px)
+    }
+
+    @include breakpoint(xl) {
+        width: 486px;
+    }
+}
+
+.f-form__contacts .s-title {
+    margin-bottom: 40px;
+
+    @include breakpoint(md) {
+        margin-bottom: 34px;
+    }
+
+    @include breakpoint(lg) {
+        margin-bottom: 40px;
+    }
+}
+
+.f-form__contacts-block {
+
+    @include breakpoint(lg) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.f-contacts-item {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: baseline;
+    font-size: 20px;
+    line-height: 27px;
+    color: $black;
+
+    @include breakpoint(lg) {
+        width: calc(50% - 12px);
+    }
+}
+
+.f-contacts-item::before {
+    margin-right: 15px;
+    font-family: $fa5;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 1;
+    color: $red;
+    transform: translateY(2px);
+}
+
+.f-contacts-item.f-phone::before {
+    content: '\e11c';
+}
+
+.f-contacts-item.f-email::before {
+    content: '\e10c';
+}
+
+.f-contacts-item.f-address {
+    position: relative;
+}
+
+.f-contacts-item.f-address::before {
+    content: '';
+    background: $red;
+    display: inline-block;
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    border-radius: 50%;
+    transform: translateY(5px);
+}
+
+.f-contacts-item.f-address::after {
+    content: '\f3c5';
+    position: absolute;
+    top: 0;
+    left: 7px;
+    font-family: $fa5;
+    font-weight: 900;
+    font-size: 13px;
+    color: #fff;
+    transform: translateY(3px);
+}
+
+.f-contacts-numbers {
+    margin-top: 55px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    color: $black;
+
+    @include breakpoint(lg) {
+        margin-top: 40px;
+    }
+}
+
+.f-form__main {
+    margin-top: 60px;
+    padding: 30px 20px;
+    background: #fff;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+        padding: 40px;
+        width: calc(((100% / 12) * 7) - 12px);
+    }
+
+    @include breakpoint(lg) {
+        width: calc(((100% / 12) * 6) - 16px);
+    }
+
+    @include breakpoint(xl) {
+        position: relative;
+        width: 580px;
+    }
+}
+
+.f-form__main-title {
+    margin-bottom: 18px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: $black;
+
+    @include breakpoint(md) {
+        margin-bottom: 6px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 25px;
+        line-height: 34px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 30px;
+        line-height: 41px;
+    }
+}
+
+.f-form__main input {
+    margin-top: 22px;
+    padding-bottom: 12px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: $gray2;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.f-form__main textarea {
+    margin-top: 22px;
+    padding-bottom: 90px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: $gray2;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.f-form__main .button-style {
+    margin-top: 40px;
+    padding: 20px 27px;
+    width: 100%;
+    max-width: 320px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+
+    @include breakpoint(md) {
+        padding: 20px;
+        max-width: 226px;
+    }
+}
+
+.agreement {
+    margin-top: 16px;
+    display: flex;
+    font-size: 14px;
+    line-height: 150%;
+    color: $gray3;
+
+    @include breakpoint(md) {
+        max-width: 260px;
+    }
+
+    @include breakpoint(xl) {
+        margin: 0;
+        position: absolute;
+        right: 38px;
+        bottom: 50px;
+    }
+}
+
+.agreement::before {
+    content: '\f14a';
+    margin-right: 5px;
+    font-family: $icon;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+    transform: translateY(3px);
+}
+
 .footer__main {
+    padding: 50px 0;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(md) {
+        padding: 60px 0 50px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include breakpoint(lg) {
+        padding: 60px 0;
+    }
 }
 
 .footer__left {
-    order: 1;
+
+    @include breakpointMax(md) {
+        order: 2;
+        width: calc(((100% / 12) * 5) - 37px);
+    }
+
+    @include breakpoint(lg) {
+        width: calc(((100% / 12) * 6) - 20px);
+    }
+}
+
+.footer__logo {
+    margin-top: 50px;
+    width: 234px;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+    }
+
+    @include breakpoint(lg) {
+        width: 269px;
+    }
+}
+
+.footer__policy {
+    margin-top: 20px;
+
+    @include breakpoint(lg) {
+        margin-top: 30px;
+    }
 }
 
 .footer__right {
-    order: 2;
+
+    @include breakpointMax(md) {
+        order: 1;
+    }
+
+    @include breakpoint(md) {
+        display: flex;
+        width: calc(((100% / 12) * 7) - 37px);
+    }
+
+    @include breakpoint(lg) {
+        justify-content: flex-end;
+        width: calc(((100% / 12) * 6) - 20px);
+    }
+}
+
+.footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 375px;
+
+    @include breakpoint(md) {
+        margin-right: 50px;
+        display: block;
+    }
+
+    @include breakpoint(lg) {
+        margin-right: 120px;
+    }
+}
+
+.footer__nav-item {
+    margin-bottom: 23px;
+    margin-right: 50px;
+
+    @include breakpoint(md) {
+        margin-right: 0;
+    }
+}
+
+.footer__nav-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: $black;
+}
+
+.footer__contacts {
+    margin-top: 32px;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+    }
+}
+
+.footer__contacts .f-contacts-item {
+
+    @include breakpoint(lg) {
+        width: auto;
+    }
+}
+
+.footer__copyright {
+    margin-top: 10px;
+}
+
+.footer__devs {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: $black;
+}
+
+.footer__devs a {
+    margin-bottom: 3px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.footer__contacts .button-style {
+    padding: 20px 53px;
+    max-width: 320px;
+
+    @include breakpoint(md) {
+        padding: 20px;
+        max-width: 214px;
+    }
 }

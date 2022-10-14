@@ -1,6 +1,42 @@
 include _mixins
 block footer
 
+    .footer-form
+
+        .container
+
+            .f-form
+
+                .f-form__contacts
+
+                    h2.s-title Контакты
+
+                    .f-form__contacts-block
+                        a.f-contacts-item.f-phone(href="tel:8-495-608-60-04")
+                            b 8-495-608-60-04
+                        a.f-contacts-item.f-phone(href="tel:8-495-608-95-00")
+                            b 8-495-608-95-00
+                        a.f-contacts-item.f-email(href="mailto:veteran-r@mail.ru") veteran-r@mail.ru
+                        p.f-contacts-item.f-address 129090, Москва, ул.&nbsp;Щепкина, д. 8.
+
+                    p.f-contacts-numbers Объявления и реклама:
+                    a.f-contacts-item.f-phone(href="tel:8-495-608-60-04") 8-495-608-60-04
+                    a.f-contacts-item.f-phone(href="tel:8-495-608-95-00") 8-495-608-95-00
+
+                .f-form__main
+
+                    p.f-form__main-title Возникли вопросы?
+                        br
+                        |Напишите нам в редакцию
+
+                    form
+                        input(type="text" placeholder="Имя")
+                        input(type="email" placeholder="E-mail")
+                        textarea(placeholder="Сообщение")
+
+                        input.button-style.button-style--red(type="submit", value="Написать в редакцию")
+                        small.agreement Согласен(на) на обработку персональных данных
+
     footer#footer.footer
 
         .container
@@ -10,7 +46,8 @@ block footer
                 .footer__left
 
                     .footer__logo
-                        img(src="assets/images/logo.png", alt="logo")
+                        a(href="/")
+                            img(src="assets/images/logo.png", alt="logo")
 
                     .footer__policy
                         a(href="#") Политика конфиденциальности
@@ -20,25 +57,26 @@ block footer
 
                     .footer__devs
                         a(href="https://di-project.studio/") Разработка сайта
-                        | Di-Project
+                        |Di-Project.Studio
 
                 .footer__right
 
-                    .footer__nav
-                        ul
-                            li
-                                a(href="#") Главная
-                            li
-                                a(href="#") О редакции
-                            li
-                                a(href="#") Архив
-                            li
-                                a(href="#") Документы
-                            li
-                                a(href="#") Контакты
+                    ul.footer__nav
+                        li.footer__nav-item
+                            a.footer__nav-link(href="#") Главная
+                        li.footer__nav-item
+                            a.footer__nav-link(href="#") О редакции
+                        li.footer__nav-item
+                            a.footer__nav-link(href="#") Архив
+                        li.footer__nav-item
+                            a.footer__nav-link(href="#") Документы
+                        li.footer__nav-item
+                            a.footer__nav-link(href="#") Контакты
 
                     .footer__contacts
-                        a(href="tel:8-495-608-60-04") 8-495-608-60-04
-                        a(href="tel:8-495-608-95-00") 8-495-608-95-00
-                        a(href="mailto:veteran-r@mail.ru") veteran-r@mail.ru
+                        a.f-contacts-item.f-phone(href="tel:8-495-608-60-04")
+                            b 8-495-608-60-04
+                        a.f-contacts-item.f-phone(href="tel:8-495-608-95-00")
+                            b 8-495-608-95-00
+                        a.f-contacts-item.f-email(href="mailto:veteran-r@mail.ru") veteran-r@mail.ru
                         a.button-style.button-style--red Оформить подписку
