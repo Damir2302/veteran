@@ -23,10 +23,12 @@
 
 .header__logo {
     width: 156px;
+    height: 51px;
 
     @include breakpoint(lg) {
         margin: 0 auto;
         width: 210px;
+        height: 68px;
     }
 }
 

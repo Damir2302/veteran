@@ -277,6 +277,7 @@
 .footer__logo {
     margin-top: 50px;
     width: 234px;
+    height: 75px;
 
     @include breakpoint(md) {
         margin-top: 0;
@@ -284,6 +285,7 @@
 
     @include breakpoint(lg) {
         width: 269px;
+        height: 87px;
     }
 }
 
