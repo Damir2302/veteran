@@ -1,0 +1,63 @@
+.breadcrumbs {
+    padding: 30px 0;
+    background: #F6F6F6;
+
+    @include breakpoint(md) {
+        padding: 20px 0 30px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 20px 0 45px;
+    }
+}
+
+.breadcrumbs-wrapper {
+
+    @include breakpointMax(md) {
+        display: none;
+    }
+
+    @include breakpoint(md) {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include breakpoint(lg) {
+        margin-bottom: 30px;
+    }
+}
+
+.breadcrumbs-item {
+
+    @include breakpoint(md) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: $gray3;
+    }
+}
+
+.breadcrumbs-separator {
+    margin: 0 20px;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray3;
+}
+
+.page-title {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 120%;
+    text-align: center;
+    color: $black;
+
+    @include breakpoint(md) {
+        font-size: 30px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 45px;
+    }
+}

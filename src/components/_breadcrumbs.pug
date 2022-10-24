@@ -1,0 +1,27 @@
+mixin breadcrumbs(title, ...items)
+
+    .breadcrumbs
+
+        .container
+
+            .breadcrumbs-wrapper
+
+                .breadcrumbs-item
+                    a(href='/') Главная
+
+                each item in items
+
+                    if item == items[items.length - 1]
+                        span.breadcrumbs-separator
+                            .far.fa-chevron-right
+                        .breadcrumbs-item
+                            span= item
+
+                    else
+                        span.breadcrumbs-separator
+                            .far.fa-chevron-right
+                        .breadcrumbs-item
+                            a(href="#")= item
+
+            if title != ''
+                h1.page-title= title
