@@ -37,6 +37,10 @@ a {
     cursor: pointer;
 }
 
+a:hover {
+    color: inherit;
+}
+
 a:active, a:hover {
     outline: 0;
 }

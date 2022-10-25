@@ -78,13 +78,19 @@
     padding: 12px 20px;
     background: #FFFFFF;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    max-width: 245px;
+    display: inline-flex;
     font-weight: 600;
     font-size: 14px;
     line-height: 150%;
     border: 1px solid #D9D9D9;
+}
+
+.hero__content-label p:first-child {
+    margin-right: 12px;
+}
+
+.hero__content-label p:last-child {
+    margin-left: 12px;
 }
 
 .hero__content .s-title {

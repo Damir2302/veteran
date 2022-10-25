@@ -1,0 +1,136 @@
+.archive-page {
+    padding: 30px 0 60px;
+
+    @include breakpoint(md) {
+        padding: 40px 0 60px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 40px 0 80px;
+    }
+
+    @include breakpoint(xl) {
+        padding: 40px 0 100px;
+    }
+}
+
+.archive__block {
+    padding: 16px;
+    border: 1px solid #D9D9D9;
+
+    @include breakpoint(md) {
+        padding: 30px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    @include breakpoint(lg) {
+        justify-content: unset;
+    }
+}
+
+.archive__block ~ .archive__block {
+    margin-top: 20px;
+
+    @include breakpoint(lg) {
+        margin-top: 30px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 40px;
+    }
+}
+
+.archive__image {
+    height: calc((100vw - 72px) * 1.446);
+
+    @include breakpoint(md) {
+        position: relative;
+        width: calc(((100% / 12) * 5) - 10px);
+        height: auto;
+        z-index: 1;
+    }
+
+    @include breakpoint(lg) {
+        min-width: 307px;
+        min-height: 445px;
+        max-width: 307px;
+        max-height: 445px;
+    }
+}
+
+.archive__content {
+    position: relative;
+
+    @include breakpoint(md) {
+        width: calc(((100% / 12) * 7) - 10px);
+    }
+
+    @include breakpoint(lg) {
+        margin-left: 45px;
+        width: auto;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 65px;
+    }
+}
+
+.archive__content-label {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #FFFFFF;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    border: 1px solid #D9D9D9;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+    }
+}
+
+.archive__content-label p {
+    display: inline-block;
+}
+
+.archive__block-title {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: $black;
+
+    @include breakpoint(md) {
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 45px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 45px;
+    }
+}
+
+.archive__content-text {
+    margin-top: 20px;
+    position: relative;
+    max-width: 400px;
+    font-size: 16px;
+    line-height: 160%;
+
+    @include breakpoint(md) {
+        margin-top: 16px;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 30px;
+        max-width: 618px;
+    }
+}

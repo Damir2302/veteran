@@ -22,4 +22,36 @@ $(document).ready(function() {
         }
     })
 
+    // DOCUMENTS MASONRY.JS
+
+    if ($('.docs').length) {
+        $('.docs').masonry({
+            // options
+            itemSelector: '.docs__item',
+            columnWidth: 1,
+            gutter: 40
+        });
+    }
+
+    function addYaMaps () {
+        var myMap;
+        ymaps.ready(init);
+
+        function init () {
+            myMap = new ymaps.Map('map', {
+                center: [47.225609, 39.623367],
+                zoom: 11,
+                controls: []
+            }),
+            myPlacemark = new ymaps.Placemark([47.225609, 39.623367], {}, {
+        });
+        myMap.geoObjects.add(myPlacemark);
+        myMap.behaviors.disable('scrollZoom');
+        }
+    }
+
+    if ($('#map').length != 0) {
+        addYaMaps ();
+    }
+
 });

@@ -1,0 +1,49 @@
+---
+title: Газета Ветеран | Контакты
+---
+
+extends includes/_page
+
+block main
+
+    // Breadcrumbs::Start
+    include components/_breadcrumbs
+    +breadcrumbs('Контакты', 'Контакты')
+    // Breadcrumbs::End
+
+    .contacts-page
+
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=&lt;ваш API-ключ&gt;" type="text/javascript")
+
+        .container
+
+            .contacts__wrap
+
+                #map(style="width: 100%; height: 720px")
+
+                .contacts__side
+                    .f-form__contacts-block
+                        a.f-contacts-item.f-phone(href="tel:8-495-608-60-04")
+                            b 8-495-608-60-04
+                        a.f-contacts-item.f-phone(href="tel:8-495-608-95-00")
+                            b 8-495-608-95-00
+                        a.f-contacts-item.f-email(href="mailto:veteran-r@mail.ru") veteran-r@mail.ru
+                        p.f-contacts-item.f-address 129090, Москва, ул.&nbsp;Щепкина, д. 8.
+
+                    p.f-contacts-numbers Объявления и реклама:
+                    a.f-contacts-item.f-phone(href="tel:8-495-608-60-04") 8-495-608-60-04
+                    a.f-contacts-item.f-phone(href="tel:8-495-608-95-00") 8-495-608-95-00
+
+                    p
+                        b ИНН/КПП:
+                        |2243575/770201001
+
+                    p
+                        b Расчетный счет:
+                        |40703810638090105891
+                    p
+                        b БИК:
+                        |04425225
+                    p
+                        b ПАО Сбербанк России Корсчет:
+                        |30101810400000000225
