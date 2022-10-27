@@ -39,11 +39,11 @@ $(document).ready(function() {
 
         function init () {
             myMap = new ymaps.Map('map', {
-                center: [47.225609, 39.623367],
+                center: [55.775010, 37.630066],
                 zoom: 11,
                 controls: []
             }),
-            myPlacemark = new ymaps.Placemark([47.225609, 39.623367], {}, {
+            myPlacemark = new ymaps.Placemark([55.774598, 37.629286], {}, {
         });
         myMap.geoObjects.add(myPlacemark);
         myMap.behaviors.disable('scrollZoom');
